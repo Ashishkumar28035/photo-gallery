@@ -66,8 +66,10 @@ function App() {
               >
                 <img
                   className="w-full h-48 object-cover rounded-lg"
-                  src={photo.download_url}
-                  alt="Photo"
+                  src={`https://picsum.photos/id/${photo.id}/400/300`}
+                  alt={photo.author}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="flex items-center justify-between">
                   <p className="text-sm font-medium">{photo.author}</p>
